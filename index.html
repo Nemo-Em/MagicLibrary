@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magic Library</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <h1>Welcome to the Magic Library</h1>
+          <h2>Find book by ID</h2>
+          <input id="bookID" type="number" min=1></input>
+          <input id="bookID-btn"type="submit" value = "find book!"></input>
+          <h3 id="bookTitleAuthor"></h3>
+          <span id="bookDescription">
+          <hr>
+          <h2>Add new book</h2>
+            <input id="bookTitleInput" type="text" placeholder="title"></input><br>
+            <input id="bookAuthorInput" type="text" placeholder="author"></input><br>
+            <input id="bookDescrInput" type="text" placeholder="description"></input>
+            <input id="newBook-btn"type="submit" value = "add book"></input>
+            <span id="bookAdded"></span>
+          <hr>
+          <h2>BookList</h2>
+          <div id="books"></div>
+        </div>
+       <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+   </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src ="site.js"></script>
+</body>
+</html>
