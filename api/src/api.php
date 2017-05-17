@@ -12,6 +12,22 @@ require("book.php");
     $book->saveToDB($conn);
     return null;
   }
+
+  if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+  parse_str(file_get_contents("php://input"), $put_vars);
+  $id = intval($put_vars['id']);
+  $title = $put_vars['title'];
+  $author = $put_vars['author'];
+  $descr = $put_vars['descr'];
+  $book = new Book;
+  $book->setID($id);
+  $book->setTitle($title);
+  $book->setAuthor($author);
+  $book->setDescription($descr);
+  $book->saveToDB($conn);
+  return null;
+  }
+
   if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
   parse_str(file_get_contents("php://input"), $del_vars);
   $id = $del_vars['id'];

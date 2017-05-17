@@ -37,8 +37,6 @@ $(function(){
             alert(xhr.status);
             alert(thrownError);
          })
-
-
       });
     }
   });
@@ -67,6 +65,24 @@ $(function(){
     })
     .done(function(){
       alert("book added");
+      history.go(0);
+     })
+    .fail(function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+     })
+  });
+  $("#changeBook-btn").click(function(c){
+    c.preventDefault();
+    var bookID = $("#bookIdChange").val()
+    var bookTitle = $("#bookTitleChange").val()
+    var bookAuthor = $("#bookAuthorChange").val()
+    var bookDescr = $("#bookDescrChange").val()
+    $.ajax({
+      type:"PUT", data: {"id":bookID, "title":bookTitle, "author":bookAuthor, "descr":bookDescr}, url:"http://localhost/library/api/src/api.php"
+    })
+    .done(function(){
+      alert("book changed");
       history.go(0);
      })
     .fail(function (xhr, ajaxOptions, thrownError) {
