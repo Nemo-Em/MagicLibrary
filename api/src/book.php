@@ -108,7 +108,7 @@ private $description;
     return null;
   }
   static public function loadAllBooks(mysqli $conn){
-    $sql = "SELECT * FROM Books ORDER BY title";
+    $sql = "SELECT * FROM Books ORDER BY id";
     $bookTable = array();
     $result=$conn->query($sql);
     if ($result == true && $result->num_rows>0){

@@ -2,6 +2,7 @@ $(function(){
 
   $.getJSON('http://localhost/library/api/src/api.php', function(data){
     for (var book of data){
+      $("#bookIdChange").append("<option value="+ book['id'] +">"+ book['id'] +"</option>")
       $('#books').append("<a href ='#'class='displayBtn'>"+ book['title'] +"</a>");
       $("a").css("display","block");
       $('#books').append("<div class='bookDescr'>"
