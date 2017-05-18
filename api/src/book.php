@@ -46,12 +46,11 @@ private $description;
 
   public function saveToDB(mysqli $conn){
     if($this->id== -1) {
-      $sql = "INSERT INTO Books (title, author, description) VALUES"
-            . "('$this->title','$this->author','$this->description')";
+      $sql = 'INSERT INTO Books (title, author, description) VALUES'
+            . '("'.$this->title.'","'.$this->author.'","'.$this->description.'")';
       $result = $conn->query($sql);
       if ($result == true) {
         $this->id = $conn->insert_id;
-        echo "new book added";
         return true;
       }
       if ($result == false){
@@ -60,12 +59,13 @@ private $description;
       }
     }
     else{
-      $sql = "UPDATE Books SET title = '$this->title', author = '$this->author', "
-      ."description = '$this->description' "
-      ."WHERE id = $this->id";
+      $sql = 'UPDATE Books SET '
+      .'title = "'.$this->title.'", '
+      .'author = "'.$this->author.'", '
+      .'description = "'.$this->description.'" '
+      .'WHERE id = '.$this->id;
       $result=$conn->query($sql);
       if ($result == true){
-        echo "changed book details";
         return true;
       }
       if ($result == false){
@@ -82,7 +82,6 @@ private $description;
       $result=$conn->query($sql);
       if ($result==true){
         $this->id =-1;
-        echo "book deleted";
         return true;
       }
       else{
