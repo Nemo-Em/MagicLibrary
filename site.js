@@ -1,4 +1,10 @@
 $(function(){
+  $("h1").css("background-color","yellow");
+  $("h1").mouseover(function(){
+    $(this).text("it's magic!");
+    $(this).css("color","white");
+    $(this).css("background-color","blue");
+  })
 
   $.getJSON('http://localhost/library/api/src/api.php', function(data){
     for (var book of data){
