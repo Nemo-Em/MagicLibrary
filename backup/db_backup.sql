@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Books` (
   `id` int(11) NOT NULL,
-  `title` varchar(250) NOT NULL,
-  `author` varchar(250) NOT NULL,
-  `description` varchar(500) NOT NULL
+  `title` varchar(50) NOT NULL,
+  `author` varchar(50) NOT NULL,
+  `description` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
