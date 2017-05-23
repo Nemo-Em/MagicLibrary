@@ -62,3 +62,5 @@ require("book.php");
   header('Content-type: application/json');
   echo $booksJSON;
 }
+$conn->close();
+$conn = null;
