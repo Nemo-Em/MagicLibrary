@@ -27,7 +27,7 @@ $(function(){
         descr.css("display","none")
       }
     });
-    var deleteBtns = document.querySelectorAll("button")
+    var deleteBtns = document.querySelectorAll("button.delete")
     for(var i=0; i < deleteBtns.length; i++){
       var btn = deleteBtns[i];
       $(btn).click(function(c){

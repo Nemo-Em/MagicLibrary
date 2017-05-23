@@ -14,23 +14,23 @@
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <h1>Welcome to the Magic Library</h1>
           <h2>Find book by ID</h2>
-          <input id="bookID" type="number" min=1></input>
-          <input id="bookID-btn"type="submit" value = "find book!"></input>
+          <input id="bookID" class="form-control" type="number" min=1></input>
+          <input id="bookID-btn"type="submit" class="btn btn-default" value = "find book!"></input>
           <h3 id="bookTitleAuthor"></h3>
           <span id="bookDescription">
           <hr>
           <h2>Add new book</h2>
-            <input id="bookTitleInput" type="text" placeholder="title" maxlength="50"></input><br>
-            <input id="bookAuthorInput" type="text" placeholder="author" maxlength="50"></input><br>
-            <textarea id="bookDescrInput" placeholder="description" maxlength="250" style='height:100px;width:300px;'></textarea>
-            <input id="newBook-btn"type="submit" value = "add book"></input>
+            <input id="bookTitleInput" class="form-control" type="text" placeholder="title" maxlength="50"></input>
+            <input id="bookAuthorInput" class="form-control" type="text" placeholder="author" maxlength="50"></input>
+            <textarea id="bookDescrInput" class="form-control" placeholder="description" maxlength="250" style='height:100px;'></textarea>
+            <input id="newBook-btn" class="btn btn-default" type="submit" value = "add book"></input>
           <hr>
           <h2>Change book info</h2>
-            book id: <select id="bookIdChange" type="number" placeholder="id" min=1></select><br>
-            <input id="bookTitleChange" type="text" placeholder="new title"></input><br>
-            <input id="bookAuthorChange" type="text" placeholder="new author"></input><br>
-            <input id="bookDescrChange" type="text" placeholder="new description"></input>
-            <input id="changeBook-btn"type="submit" value = "change book info"></input>
+            book id: <select id="bookIdChange" class="form-control" type="number" placeholder="id" min=1></select><br>
+            <input id="bookTitleChange" class="form-control" type="text" placeholder="new title"></input>
+            <input id="bookAuthorChange" class="form-control" type="text" placeholder="new author"></input>
+            <textarea id="bookDescrChange" class="form-control" placeholder="new description" maxlength="250" style='height:100px;'></textarea>
+            <input id="changeBook-btn" class="btn btn-default" type="submit" value = "change book info"></input>
           <hr>
           <h2>BookList</h2>
           <div id="books"></div>
