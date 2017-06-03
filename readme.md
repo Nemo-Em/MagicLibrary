@@ -1,3 +1,8 @@
-#library
-project incorates PHP, HTML, CSS, JavaScript/JQuery using Ajax/REST API.
-features library database including adding/removing books, search (by id) and viewing detailed description.
+# library
+project incorporates PHP, HTML, CSS, JavaScript/JQuery using Ajax/REST API for communication with UI.
+features 
+-library database (SQL)
+-adding/removing books
+-viewing detailed book description
+-search (by id)
+
